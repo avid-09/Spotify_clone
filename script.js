@@ -70,7 +70,7 @@ songItem.forEach((element, i) => {
 masterPlayPasue.addEventListener("click", () => {
   if (audioElement.paused || audioElement.currentTime <= 0) {
     audioElement.play();
-    masterPlayPasue.src = "play-button.png";
+    masterPlayPasue.src = "Image/play-button.png";
     if (song_name.innerText === "") {
       song_name.innerText = "Choo Lo";
       currentSongIndex = 0;
@@ -78,7 +78,7 @@ masterPlayPasue.addEventListener("click", () => {
     gif.style.opacity = 1;
   } else {
     audioElement.pause();
-    masterPlayPasue.src = "pause-button.png";
+    masterPlayPasue.src = "Image/pause-button.png";
     gif.style.opacity = 0;
   }
 });
@@ -99,7 +99,7 @@ audioElement.addEventListener("timeupdate", () => {
     }
     audioElement.src = songs[currentSongIndex].filePath;
     audioElement.play();
-    masterPlayPasue.src = "play-button.png";
+    masterPlayPasue.src = "Image/play-button.png";
     gif.style.opacity = 1;
     song_name.innerText = `${songs[currentSongIndex].songName}`;
   }
@@ -118,7 +118,7 @@ Array.from(document.getElementsByClassName("songName")).forEach(
       audioElement.src = songs[i].filePath;
       currentSongIndex = parseInt(songs[i].index);
       audioElement.play();
-      masterPlayPasue.src = "play-button.png";
+      masterPlayPasue.src = "Image/play-button.png";
       gif.style.opacity = 1;
       song_name.innerText = `${songs[i].songName}`;
     });
@@ -135,7 +135,7 @@ document.getElementById("leftPlay").addEventListener("click", () => {
 
   audioElement.src = songs[currentSongIndex].filePath;
   audioElement.play();
-  masterPlayPasue.src = "play-button.png";
+  masterPlayPasue.src = "Image/play-button.png";
   gif.style.opacity = 1;
   song_name.innerText = `${songs[currentSongIndex].songName}`;
 });
@@ -150,7 +150,7 @@ document.getElementById("rightPlay").addEventListener("click", () => {
 
   audioElement.src = songs[currentSongIndex].filePath;
   audioElement.play();
-  masterPlayPasue.src = "play-button.png";
+  masterPlayPasue.src = "Image/play-button.png";
   gif.style.opacity = 1;
   song_name.innerText = `${songs[currentSongIndex].songName}`;
 });
@@ -168,7 +168,7 @@ document.getElementById("forwordPlay").addEventListener("click", () => {
     }
     audioElement.src = songs[currentSongIndex].filePath;
     audioElement.play();
-    masterPlayPasue.src = "play-button.png";
+    masterPlayPasue.src = "Image/play-button.png";
     gif.style.opacity = 1;
     song_name.innerText = `${songs[currentSongIndex].songName}`;
   }

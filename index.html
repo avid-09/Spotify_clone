@@ -12,19 +12,97 @@
         <li class="brand"><img src="logo.png" alt="Spotify" />Spotify</li>
         <li>Home</li>
         <li>About</li>
+        <ul class="sl">
+          <li class="SignUp">Sign Up</li>
+          <li class="LogIn">Log In</li>
+        </ul>
       </ul>
     </nav>
 
     <div class="container">
-      <h1>Best of NCS - No Copyright Sounds</h1>
-      <div class="songlist"></div>
+      <div class="songlist">
+        <h1 class="cont">Best of NCS - Non Copyright Sounds</h1>
+        <div class="songItemContainer">
+          <div class="songItem">
+            <img src="cover1.jpg" alt="1" />
+            <span class="songName">Let Me Love You</span>
+            <span class="songlistplay"
+              ><span class="Timestamp">03:53</span></span
+            >
+          </div>
+          <div class="songItem">
+            <img src="cover/1.jpg" alt="1" />
+            <span class="songName">Legion</span>
+            <span class="songlistplay"
+              ><span class="Timestamp">03:26</span></span
+            >
+          </div>
+          <div class="songItem">
+            <img src="cover/2.jpg" alt="1" />
+            <span class="songName">Trap</span>
+            <span class="songlistplay"
+              ><span class="Timestamp">03:44</span></span
+            >
+          </div>
+          <div class="songItem">
+            <img src="cover/3.jpg" alt="1" />
+            <span class="songName">They Mad</span>
+            <span class="songlistplay"
+              ><span class="Timestamp">03:48</span></span
+            >
+          </div>
+          <div class="songItem">
+            <img src="cover/4.jpg" alt="1" />
+            <span class="songName">Rich The Kid</span>
+            <span class="songlistplay"
+              ><span class="Timestamp">03:35</span></span
+            >
+          </div>
+          <div class="songItem">
+            <img src="cover/5.jpg" alt="1" />
+            <span class="songName">Song Title</span>
+            <span class="songlistplay"
+              ><span class="Timestamp">04:22</span></span
+            >
+          </div>
+          <div class="songItem">
+            <img src="cover/6.jpg" alt="1" />
+            <span class="songName">Safety Dance</span>
+            <span class="songlistplay"
+              ><span class="Timestamp">02:57</span></span
+            >
+          </div>
+          <div class="songItem">
+            <img src="cover/9.jpg" alt="1" />
+            <span class="songName">Back It Up</span>
+            <span class="songlistplay"
+              ><span class="Timestamp">05:21</span></span
+            >
+          </div>
+        </div>
+      </div>
       <div class="songBanner"></div>
     </div>
 
     <div class="bottom">
-      <input type="range" name="range" id="myprogressbar" min="0" max="100" />
+      <input
+        type="range"
+        name="range"
+        id="myprogressbar"
+        value="0"
+        min="0"
+        max="100"
+      />
       <div class="icons">
-        
+        <img class="ic" id="backwordPlay" src="backword.png" alt="" />
+        <img class="ic" id="leftPlay" src="left.png" alt="" />
+        <img class="ic" src="pause-button.png" id="masterPlayPasue" alt="" />
+        <img class="ic" id="rightPlay" src="right.png" alt="" />
+        <img class="ic" id="forwordPlay" src="forword.png" alt="" />
+      </div>
+      <div class="songInfo">
+        <img src="playing.gif" width="42px" alt="" id="gif" />
+        <p id="song_name"></p>
       </div>
     </div>
 

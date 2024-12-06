@@ -59,6 +59,12 @@ let songs = [
     coverPath: "cover/9.jpg",
     index: 7,
   },
+  {
+    songName: "Khamoshiyan",
+    filePath: "songs/Khamoshiyan - Khamoshiyan 128 Kbps.mp3",
+    coverPath: "cover/10.png",
+    index: 8,
+  },
 ];
 
 // Set All Songs Names
@@ -116,8 +122,8 @@ Array.from(document.getElementsByClassName("songName")).forEach(
   (element, i) => {
     element.addEventListener("click", (e) => {
       audioElement.src = songs[i].filePath;
-      currentSongIndex = parseInt(songs[i].index);
       audioElement.play();
+      currentSongIndex = parseInt(songs[i].index);
       masterPlayPasue.src = "Image/play-button.png";
       gif.style.opacity = 1;
       song_name.innerText = `${songs[i].songName}`;
@@ -130,7 +136,7 @@ document.getElementById("leftPlay").addEventListener("click", () => {
   if (currentSongIndex > 0) {
     currentSongIndex -= 1;
   } else {
-    currentSongIndex = 7;
+    currentSongIndex = songs.length - 1;
   }
 
   audioElement.src = songs[currentSongIndex].filePath;
@@ -142,7 +148,7 @@ document.getElementById("leftPlay").addEventListener("click", () => {
 
 // When we click rightplay button
 document.getElementById("rightPlay").addEventListener("click", () => {
-  if (currentSongIndex < 7) {
+  if (currentSongIndex < songs.length - 1) {
     currentSongIndex += 1;
   } else {
     currentSongIndex = 0;
@@ -161,7 +167,7 @@ document.getElementById("forwordPlay").addEventListener("click", () => {
     parseInt(myprogressbar.value * audioElement.duration) / 100 + 10;
 
   if (audioElement.currentTime === audioElement.duration) {
-    if (currentSongIndex < 7) {
+    if (currentSongIndex < songs.length - 1) {
       currentSongIndex += 1;
     } else {
       currentSongIndex = 0;
